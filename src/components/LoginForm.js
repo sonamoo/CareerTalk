@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { Card, VertCardSection, Input } from './commons';
-import { emailChanged } from '../actions';
+import { emailChanged, passwordChanged } from '../actions';
 import { connect } from 'react-redux';
 
 class LoginForm extends Component {
@@ -12,7 +12,7 @@ class LoginForm extends Component {
         this.props.emailChanged(text);
     }
     onPasswordChange(text) {
-        console.log(text);
+        this.props.passwordChanged(text);
     }
     
     render() {
@@ -26,8 +26,15 @@ class LoginForm extends Component {
                         value={this.props.email}
                     />                    
                 </VertCardSection>
+                
                 <VertCardSection>
-                    
+                    <Input 
+                        label="Password"
+                        placeholder="password"
+                        secureTextEntry
+                        onChangeText={this.onPasswordChange.bind(this)}
+                        value={this.props.password}
+                    />
                 </VertCardSection>
             </Card>
             
@@ -42,5 +49,6 @@ const mapStateToProps = ({ auth }) => {
 
 export default connect(mapStateToProps, {
     // Passing dispatches
+    passwordChanged,
     emailChanged
 })(LoginForm);

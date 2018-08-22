@@ -14,5 +14,14 @@ export const emailChanged = (text) => {
     return {
         type: EMAIL_CHANGED,
         payload: text
-    }
+    };
 };
+
+export const passwordChanged = (text) => {
+    console.log("password changed called");
+    return {
+        type: PASSWORD_CHANGED,
+        payload: text
+    };
+};
+
