@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "name": "Google",
+        "hiring": ["FT, INT"],
+        "majors": ["CS, CompE, ECE"],
+        "degrees": ["BS, MS, PhD"],
+        "visasponser": "true"
+    },
+    {
+        "id": "2",
+        "name": "Microsoft",
+        "hiring": ["FT"],
+        "majors": ["CS, CompE"],
+        "degrees": ["BS, MS, PhD"],
+        "visasponser": "true"
+    },
+    {
+        "id": "3",
+        "name": "Amazon",
+        "hiring": ["FT, INT"],
+        "majors": ["CS, CompE"],
+        "degrees": ["BS, MS, PhD"],
+        "visasponser": "true"
+    }
+]
