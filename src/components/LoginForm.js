@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { Card, VertCardSection, Input, Button } from './commons';
-import { emailChanged, passwordChanged } from '../actions';
+import { emailChanged, passwordChanged, login } from '../actions';
 
 class LoginForm extends Component {
     onEmailChange(text) {
@@ -14,6 +14,7 @@ class LoginForm extends Component {
     }
     onButtonPress() {
         console.log('button pressed');
+        this.props.login(this.props.email, this.props.password);
     }
     renderButton() {
         if (this.props.loading) {
@@ -60,6 +61,7 @@ const mapStateToProps = ({ auth }) => {
 
 export default connect(mapStateToProps, {
     // Passing dispatches
+    login,
     passwordChanged,
     emailChanged
 })(LoginForm);

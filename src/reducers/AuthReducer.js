@@ -15,7 +15,7 @@ import {
   };
 
   export default (state = INITIAL_STATE, action) => {
-    console.log("reducer running!");
+    console.log('reducer running!');
     switch (action.type) {
       case EMAIL_CHANGED:
         return { ...state, email: action.payload };
