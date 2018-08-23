@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import { Card, VertCardSection, Input } from './commons';
-import { emailChanged, passwordChanged } from '../actions';
 import { connect } from 'react-redux';
+import { Card, VertCardSection, Input, Button } from './commons';
+import { emailChanged, passwordChanged } from '../actions';
 
 class LoginForm extends Component {
-    //state = { email: '', password: '' };
-
     onEmailChange(text) {
         console.log(text);
         this.props.emailChanged(text);
@@ -14,7 +12,19 @@ class LoginForm extends Component {
     onPasswordChange(text) {
         this.props.passwordChanged(text);
     }
-    
+    onButtonPress() {
+        console.log('button pressed');
+    }
+    renderButton() {
+        if (this.props.loading) {
+            console.log('loading');
+        }
+        return (
+            <Button onPress={this.onButtonPress.bind(this)}>
+                Login
+            </Button>
+        );
+    }
     render() {
         return (
             <Card>
@@ -26,7 +36,6 @@ class LoginForm extends Component {
                         value={this.props.email}
                     />                    
                 </VertCardSection>
-                
                 <VertCardSection>
                     <Input 
                         label="Password"
@@ -36,8 +45,10 @@ class LoginForm extends Component {
                         value={this.props.password}
                     />
                 </VertCardSection>
+                <VertCardSection>
+                     {this.renderButton()}
+                </VertCardSection>
             </Card>
-            
         );
     }
 }

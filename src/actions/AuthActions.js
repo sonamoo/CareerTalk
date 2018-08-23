@@ -8,7 +8,6 @@ import {
     LOGIN_USER_FAIL
 } from '../actions/types';
 
-
 export const emailChanged = (text) => {
     console.log("email changed called!!");
     return {
