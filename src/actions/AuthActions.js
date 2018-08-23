@@ -5,11 +5,11 @@ import {
     PASSWORD_CHANGED,
     LOGIN_USER,
     LOGIN_USER_SUCCESS,
-    LOGIN_USER_FAIL
+     _USER_FAIL
 } from '../actions/types';
 
 export const emailChanged = (text) => {
-    console.log('email changed called!!');
+    console.log('email changed called!!: ', text);
     return {
         type: EMAIL_CHANGED,
         payload: text
@@ -17,7 +17,7 @@ export const emailChanged = (text) => {
 };
 
 export const passwordChanged = (text) => {
-    console.log('password changed called');
+    console.log('password changed called: ', text);
     return {
         type: PASSWORD_CHANGED,
         payload: text
