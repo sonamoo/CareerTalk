@@ -49,7 +49,7 @@ const loginSuccess = (dispatch, user) => {
         type: LOGIN_USER_SUCCESS,
         payload: user
     });
-    Actions.main();
+    Actions.companyList();
 };
 
 const loginFailed = (dispatch) => {
