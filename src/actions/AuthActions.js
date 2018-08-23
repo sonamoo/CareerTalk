@@ -5,7 +5,7 @@ import {
     PASSWORD_CHANGED,
     LOGIN_USER,
     LOGIN_USER_SUCCESS,
-     _USER_FAIL
+    LOGIN_USER_FAIL
 } from '../actions/types';
 
 export const emailChanged = (text) => {

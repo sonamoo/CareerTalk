@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
+import { Text } from 'react-native';
 import { Card, VertCardSection, Input, Button } from './commons';
 import { emailChanged, passwordChanged, login } from '../actions';
 
@@ -51,8 +51,19 @@ class LoginForm extends Component {
                 <VertCardSection>
                      {this.renderButton()}
                 </VertCardSection>
+                <VertCardSection>
+                     <Text style={styles.errorStyle}>{this.props.error}</Text>
+                </VertCardSection>
             </Card>
         );
+    }
+}
+
+const styles = {
+    errorStyle: {
+        fontSize: 17,
+        color: 'red',
+        alignSelf: 'center'
     }
 }
 
