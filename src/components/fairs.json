@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Engineering & Computer Science Career Fair 1",
+    "month": 9,
+    "date": 18,
+    "year": 2018,
+    "majors": ["Computer Science", "Computer Engineering"],
+    "place": "UIC Forum",
+    "address": "725 Roosevelt Rd, Chicago, IL 60608"
+  },
+  {
+    "id": 2,
+    "name": "Engineering & Computer Science Career Fair 2",
+    "month": 9,
+    "date": 19,
+    "year": 2018,
+    "majors": ["Bio Engineering", "Chemical Engineering", "Electrical Engineering", "Industrial Engineering", "Mechanical Engineering"],
+    "place": "UIC Forum",
+    "address": "725 Roosevelt Rd, Chicago, IL 60608"
+  },
+  {
+    "id": 3,
+    "name": "Engineering & Computer Science Career Fair 2",
+    "month": 10,
+    "date": 11,
+    "year": 2018,
+    "majors": ["Bio Engineering", "Chemical Engineering", "Electrical Engineering", "Industrial Engineering", "Mechanical Engineering"],
+    "place": "UIC Forum",
+    "address": "725 Roosevelt Rd, Chicago, IL 60608"
+  },
+  {
+    "id": 4,
+    "name": "Engineering & Computer Science Career Fair 2",
+    "month": 10,
+    "date": 13,
+    "year": 2018,
+    "majors": ["Bio Engineering", "Chemical Engineering", "Electrical Engineering", "Industrial Engineering", "Mechanical Engineering"],
+    "place": "UIC Forum",
+    "address": "725 Roosevelt Rd, Chicago, IL 60608"
+  },
+  {
+    "id": 5,
+    "name": "Engineering & Computer Science Career Fair 2",
+    "month": 9,
+    "date": 15,
+    "year": 2018,
+    "majors": ["Bio Engineering", "Chemical Engineering", "Electrical Engineering", "Industrial Engineering", "Mechanical Engineering"],
+    "place": "UIC Forum",
+    "address": "725 Roosevelt Rd, Chicago, IL 60608"
+  },
+  {
+    "id": 6,
+    "name": "Engineering & Computer Science Career Fair 2",
+    "month": 9,
+    "date": 19,
+    "year": 2018,
+    "majors": ["Bio Engineering", "Chemical Engineering", "Electrical Engineering", "Industrial Engineering", "Mechanical Engineering"],
+    "place": "UIC Forum",
+    "address": "725 Roosevelt Rd, Chicago, IL 60608"
+  }
+]
