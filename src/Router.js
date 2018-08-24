@@ -5,17 +5,12 @@ import LoginForm from './components/LoginForm';
 import CompanyList from './components/CompanyList';
 
 const RouterComponent = () => (
-    <Router>
-      <Stack key="root">
-        
-          <Scene key="login" component={LoginForm} title="Login" />
-        
-        
-          <Scene key="companyList" component={CompanyList} title="Comapny List" />
-        
-      </Stack>
-      
-    </Router>
-  );
+  <Router>
+    <Stack key="root">
+      <Scene key="companyList" component={CompanyList} title="Comapny List" />
+      <Scene key="login" component={LoginForm} title="Login" />        
+    </Stack>
+  </Router>
+);
 
 export default RouterComponent;
