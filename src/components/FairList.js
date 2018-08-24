@@ -1,28 +1,60 @@
 import React, { Component } from 'react';
-import { ScrollView, View } from 'react-native';
-import CompanyDetail from './CompanyDetail';
-import company from './company.json';
+import { ScrollView, View, StyleSheet } from 'react-native';
+import { Spinner } from './commons';
+import FairDetail from './FairDetail';
+import fair from './fairs.json';
 
 class FairList extends Component {
   constructor() {
     super();
-    this.state = { companies: company };
+    this.state = {
+      loading: true
+    };
   }
-  
-  renderCompanies() {
-    console.log('render company');
-    return this.state.companies.map(c => <CompanyDetail key={c.id} company={c} />);
+
+  componentDidMount() {
+    // this is where we call API
+
+    setTimeout(() => {
+      this.setState({
+        fairs: fair,
+        loading: false
+      });
+    }, 3000); // wait 3 seconds for fetching the data
+  }
+
+  componentWillReceiveProps = nextProps => {
+    // here we have company data
+    if (nextProps.company) {
+      console.log('this is not yet implemented');
+
+      this.setState({
+        loading: false
+      });
+    }
+  };
+
+  renderFairs() {
+    return this.state.fairs.map(f => <FairDetail key={f.id} fair={f} />);
   }
 
   render() {
-    //console.log(this.state);
-    console.log('render');
     return (
-      <View style={{ flex: 1 }}>
-        <ScrollView>{this.renderCompanies()}</ScrollView>
+      <View style={styles.container}>
+        {this.state.loading ? (
+          <Spinner />
+        ) : (
+          <ScrollView>{this.renderFairs()}</ScrollView>
+        )}
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 
 export default FairList;
