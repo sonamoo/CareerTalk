@@ -31,4 +31,3 @@ import {
         return state;
     }
   };
-  

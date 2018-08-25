@@ -8,8 +8,9 @@ import FairList from './components/FairList';
 const RouterComponent = () => (
   <Router>
     <Stack key="root">
+    <Scene key="fairList" component={FairList} title="Career Fair List" />
       <Scene key="companyList" component={CompanyList} title="Comapny List" />
-      <Scene key="fairList" component={FairList} title="Career Fair List" />
+      
       <Scene key="login" component={LoginForm} title="Login" />        
     </Stack>
   </Router>

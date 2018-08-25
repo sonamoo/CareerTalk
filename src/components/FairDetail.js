@@ -1,6 +1,12 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import { Card, CardSection } from './commons';
+
+const fairOnpress = (fair) => {
+  console.log(fair);
+  console.log("fair is pressed");
+};
 
 const FairDetail = ({ fair }) => (
   <Card>
@@ -14,7 +20,10 @@ const FairDetail = ({ fair }) => (
         <CardSection>
           <TouchableOpacity>
             <View>
-              <Text style={styles.fairNameTextStyle}>{fair.name}</Text>
+              <Text onPress={() => fairOnpress.bind(fair)} style={styles.fairNameTextStyle}>{fair.name}</Text>
+            </View>
+            <View>
+              <Text style={styles.fairDateTextStyle}>{fair.month}/{fair.date}/{fair.year}</Text>
             </View>
           </TouchableOpacity>
         </CardSection>
@@ -41,7 +50,10 @@ const styles = {
   },
   fairNameTextStyle: {
     height: 30,
-    fontSize: 15
+    fontSize: 12
+  },
+  fairDateTextStyle: {
+    fontSize: 11
   }
 };
 
